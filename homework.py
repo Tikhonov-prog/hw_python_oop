@@ -1,5 +1,5 @@
 import dataclasses
-from dataclasses import asdict,dataclass
+from dataclasses import asdict, dataclass
 
 
 @dataclass
@@ -16,7 +16,6 @@ class InfoMessage:
                ' Дистанция: {distance:.3f} км;'
                ' Ср. скорость: {speed:.3f} км/ч;'
                ' Потрачено ккал: {calories:.3f}.')
-
 
     def get_message(self) -> str:
         """Получить сообщение о тренировке"""
@@ -84,7 +83,6 @@ class SportsWalking(Training):
     CM_TO_M = 100
     SQR = 2
 
-
     def get_spent_calories(self) -> float:
         return ((self.SPORTS_WALKING_CALORIES_MULTIPIER
                  * self.weight
@@ -107,7 +105,6 @@ class Swimming(Training):
     LEN_STEP = 1.38
     SWIMING_MULTIPLICATE = 1.1
     SWIMING_MULTIPLICATE_2 = 2
-
 
     def get_spent_calories(self) -> float:
         return ((self.get_mean_speed()
